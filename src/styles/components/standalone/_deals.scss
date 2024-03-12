@@ -1,0 +1,173 @@
+.deal{
+    .container{
+
+        
+        border: 1px solid #ccc;
+        border-radius: 10px;
+
+        margin-top: 1.75em;
+
+        @media screen and (max-width:768px) {
+            border-radius: 0px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-left: none;
+            border-right: none;;
+            width: 100%;
+            
+        }
+
+
+        .deal-container{
+            @media screen and (max-width: 768px) {
+                max-width: 100%;
+                
+                
+            }
+
+            display: grid;
+            grid-template-columns: 25% 75%;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+
+            .deal-counter{
+
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                padding: 1.25em;
+
+                @media screen and (max-width:768px) {
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1.5em;
+                    
+                }
+                &-details{
+                    h5{
+                        font-weight: var(--font-semi-bold);
+                    }
+
+                    p{
+                        text-wrap: nowrap;
+                    }
+                }
+
+                &-list{
+
+                    display: flex;
+                    align-items: center;
+                    gap: 0.325em;
+
+                    &-item{
+                        width: 36px;
+                        height: 40px;
+                        background-color: var(--main-dark-grey);
+                        color: var(--white-color);
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        @media screen and (max-width: 768px) {
+                            background-color: #ccc;
+
+                        }
+                                
+                                
+
+                        h4{
+                            font-size: var(--h6-font-size);
+
+                            @media screen and (max-width: 768px) {
+                                color: var(--main-dark-grey);
+    
+                            }
+                        }
+
+                        p{
+                            color: #ccc;
+                            font-size: var(--body-micro-size);
+
+                            @media screen and (max-width: 768px) {
+                                color: var(--main-dark-grey);
+                                
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            // Deal product
+
+            .deal-product{
+                width: 100%;
+                overflow: scroll;
+
+                .product-list {
+
+                    display: grid;
+                    grid-template-columns: repeat(5, auto);  
+
+                    @media screen and (max-width: 769px) {
+                        display: flex;
+                        border-top: 1px solid #ccc;
+                                             
+                    }
+
+
+                    &-item {
+
+                        display: flex;
+                        flex-direction: column;
+                        padding: 1.5em 0.5em;
+                        justify-content: center;
+                        border-left: 1px solid #ccc;
+                        align-items: center;
+                        gap: 0.7em;
+
+                        @media screen and (max-width: 768px) {
+                            min-width: 140px;
+                            border-top: 1px solid #ccc;
+                            
+                        }
+                        
+
+                        img {
+                            width: 140px;
+                            height: 140px;
+                            transition: all 0.1s ease-in-out;
+                            cursor: pointer;
+
+                            @media screen and (max-width: 768px) {
+                                width: 100px;
+                                height: 100px;
+                                
+                            }
+
+                            &:hover{
+                                transform: scale(1.1);
+                            }
+                        }
+
+                        .deal-pcent{
+                            font-weight: var(--font-semi-bold);
+                            padding: 0.375em 1em;
+                            background: #FFE3E3;
+                            color: #EB001B;
+                            border-radius: 10px;
+                            font-size: var(--body-micro-size);
+                        } 
+
+                    }
+                }
+            }
+        }
+    }
+}

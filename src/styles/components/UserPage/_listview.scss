@@ -1,0 +1,231 @@
+.list-view{
+    display: flex;
+    gap: 2em;
+
+    .product{
+
+        width: 100%;
+
+        .category-view{
+            width: 100%;
+        }
+
+        .selected-filter{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1em;
+            margin-bottom: 1em;
+            
+
+            .filter-cat{
+                display: flex;
+                align-items: center;
+                max-width: 200px;
+                padding: 0.2em 0.5em;
+                border-radius: 6px;
+                gap: 0.5em;
+                
+                border: 1px solid var(--primary-color);
+
+                p{
+                    color: #777575;
+                }
+                i{
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                font-size: 0.875em;
+                color: var(--primary-color);
+                cursor: pointer;
+            }
+            
+
+        }
+
+        .product-container{
+
+            // ======================= General Styling ========================
+            .product-list{
+
+                gap: 0.625em;
+
+                .product-item{
+
+                    padding: 1.25em 0;
+                    border-radius: 10px;
+                    width: fit-content;
+
+                   
+                    
+                    background: var(--white-color);
+
+                    &-img{
+                        // width: 60%;
+                        margin: 0 auto;
+                    }
+
+                    &-detail{
+                        
+                        display: flex;
+                        align-content: space-between;
+                        position: relative;
+                        gap: 0.625em;
+                        padding-left: 1em;
+
+                        .title{
+                            margin-bottom: 0.4em;
+                            
+                        }
+
+                        .product-info {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.4em;
+                            .price{
+                                font-size: var(--body-small-size);
+                                font-weight: var(--font-semi-bold);
+
+                                .currPrice{
+                                    margin-right: 0.4em;
+                                }
+                            }
+
+                            .ratings{
+                                display: flex;
+                                gap: 0.5em;
+
+                                .shipping{
+                                    color: #00B517;
+                                }
+                            }
+
+                            .detail{
+                                width: 70%;
+                            }
+
+                            .view-detail{
+                                color: #0D6EFD;
+                                font-size: var(--body-small-size);
+                            }
+
+                        }
+
+                        .fav{
+                            position: absolute;
+                            right: 0.5em;
+                            top: 0.5em;
+                            background: var(--white-color);
+                            color: var(--primary-color);
+                            width: 24px;
+                            height: 24px;
+                            border: 1px solid #ccc;
+                            border-radius: 6px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+            }
+
+
+            // ==========================List View==============================
+            .list{
+                display: flex;
+                flex-direction: column;
+
+                .product-item{
+                    display: grid;
+                    grid-template-columns: 25% 75%;
+                    width: 100%;
+                    gap: 0.625em;
+
+                    // &-img{
+                    //     width: 210px;
+                    //     height: 210px;
+                    // }
+
+                    &-detail{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .product-info{
+                            gap: 0.75em
+                        }
+
+                        .title {
+                            font-weight: 500;
+                        }
+
+                        .fav{
+                            right: 2em;
+                        }
+                    }
+
+                    
+                }
+            }
+
+            // ===================== Grid View ===================================
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2em;
+
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: repeat(2, 1fr);
+
+                    
+                }
+
+                .product-item{
+                    
+                    display: flex;
+                    flex-direction: column;
+
+                    &-img{
+                        width: 60%;
+                        margin: 22px auto 30px;
+                    }
+
+                    &-detail{
+                        border-top: 1px solid #e2dfdf;
+                        padding: 12px 20px;
+                        display: flex;
+                        flex-direction: column-reverse;
+
+                        .title {
+                            font-size: var(--body-micro-size);
+                            color: var(--dark-grey);
+                            
+                        }
+
+                        .product-info{
+
+                            .ratings{
+                                .orders, .shipping{
+                                    display: none;
+                                }
+                            }
+
+                            .detail, .view-detail{
+                                display: none;
+                            }
+
+                            
+                        }
+
+                      
+                    }
+                }
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,110 @@
+<div class="header">
+    <app-header></app-header>
+    <app-header-nav ></app-header-nav>
+</div>
+<div class="home">
+    <div class="container"> 
+        <div class="home-container">
+            <div class="hero-container">
+                <div class="nav-list">
+                    <ul class="nav-list">
+                        <li *ngFor="let link of navLinks" class="nav-link" [routerLink]=""><a href="#">{{link.name}}</a></li>
+                    </ul>
+                </div>
+                <div class="nav-carousel">
+                    <img src="assets/images/hero-img.png">
+        
+                </div>
+                <div class="nav-login">
+                    <div class="login">
+                        <div class="user">
+                            <div class="dp">
+                                <i class="bx bxs-user"></i>
+                            </div>
+                            <div class="get-started">
+                                <p>Hi, User</p>
+                                <p>Lets get started</p>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button class="join-btn">Join Now</button>
+                            <button class="login-btn">Sign in</button>
+                        </div>
+                    </div>
+                    <div class="offer-1">
+                        <p>Get US $10 off<br> with a new<br> supplier</p>
+                    </div>
+                    <div class="offer-2">
+                        <p>Send quotes with<br> supplier<br> preferences</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Product Carousel -->
+            <div class="product-carousel">
+                <app-deals [prodArray]="dealProducts"></app-deals>
+            </div>
+
+            <div class="product-showcase">
+                <app-product-showcase 
+                    [title]="'Home and Outdoor'" 
+                    [btnContent]="'Source Now'" 
+                    [products]="homeProducts"
+                    [bgImage]="'assets/images/products-bg/home-outdoor.png'">
+                </app-product-showcase>
+
+                <app-product-showcase 
+                    [title]="'Consumer Electronics and Gadgets'" 
+                    [btnContent]="'Source Now'" 
+                    [products]="consumerProducts"
+                    [bgImage]="'assets/images/products-bg/computer-gadgets.png'">
+                </app-product-showcase>
+            </div>
+            <app-quote></app-quote>
+            <app-recommended [products]="demoProd"></app-recommended>
+
+            <div class="extra-services">
+                <h5>Our Extra Services</h5>
+                <div class="extra-services-list">
+                    <div class="extra-services-list-item">
+                        <img alt="extra-1" src="assets/images/other-services-bg/Mask-group.png">
+                        <p>Source from Industry Hubs</p>
+                        <div class="extra-icon">
+                            <i class="bx bx-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="extra-services-list-item">
+                        <img alt="extra-1" src="assets/images/other-services-bg/Mask-group-2.png">
+                        <p>Customize Your Products</p>
+                        <div class="extra-icon">
+                            <i class="bx bx-box"></i>
+                        </div>
+                    </div>
+
+                    <div class="extra-services-list-item">
+                        <img alt="extra-1" src="assets/images/other-services-bg/Mask-group-3.png">
+                        <p>Fast, reliable shipping by ocean or air</p>
+                        <div class="extra-icon">
+                            <i class="bx bx-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="extra-services-list-item">
+                        <img alt="extra-1" src="assets/images/other-services-bg/Mask-group-4.png">
+                        <p>Product monitoring and inspection</p>
+                        <div class="extra-icon">
+                            <i class="bx bxs-shield"></i>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <app-region [countries]="countries"></app-region>
+    </div>
+</div>
+<app-subscribe></app-subscribe>
+<app-footer></app-footer>

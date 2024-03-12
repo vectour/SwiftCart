@@ -1,0 +1,57 @@
+<app-header></app-header>
+<app-header-nav></app-header-nav>
+<div class="list-view container">
+    <app-product-filter 
+    (selectedfilterArray)="collectedFilter($event)"
+    (rangeArray)="collectRangeArray($event)"></app-product-filter>
+    <div class="product">
+        <div class="category-view">
+            <app-filter [selectedCategory]="selectedCategory" (changeViewEmitter)="emmittedView($event)"></app-filter>
+        </div>
+        <div class="selected-filter">
+            <div class="filter-cat" *ngFor="let brand of filterarray['brands']; let i = index ">
+                <p>{{brand}}</p>
+                <i class="bx bx-x" (click)="deleteBrand(i)"></i>
+            </div>
+            <div class="filter-cat" *ngFor="let feature of filterarray['features']; let i = index">
+                <p>{{feature}}</p>
+                <i class="bx bx-x" (click)="deleteFeature(i)" ></i>
+            </div>
+            <!-- =====================Clear Filters ============================ -->
+            <div>
+                <p (click)="clearFilter()">Clear All Filters</p>
+            </div>
+        </div>
+        
+       
+        <div class="product-container">
+            <ul class="product-list" [ngClass]="{'list': !listView, 'grid': listView}">
+                <li class="product-item"  *ngFor="let product of products">
+                    <img class="product-item-img" src="{{product.imgPath}}">
+                    <div class="product-item-detail">
+                        <h5 class="title">{{product.title}}</h5>
+                        <div class="product-info">
+                            <p class="price"> 
+                                <span class="currPrice">${{product.price.currentPrice}}</span>
+                                <span class="discPrice" style="text-decoration: line-through; color: #ccc;">${{product.price.discountPrice}}</span>
+                            </p>
+                            <span class="ratings">
+                                <p class="stars">Ratings</p>
+                                <p class="orders">154 orders</p>
+                                <p class="shipping">Free Shipping</p>
+                            </span>
+                            <p class="detail">{{product.detail}}</p>
+                            <a href="#" class="view-detail">View Details</a>
+                        </div>
+                        <div class="fav">
+                            <i class="bx bx-heart"></i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<app-pagination></app-pagination>
+<app-subscribe></app-subscribe>
+<app-footer></app-footer>

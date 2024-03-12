@@ -1,0 +1,52 @@
+<div class="filter">
+    <div class="filter-left">
+        <p>12,911 items in <span style="font-weight: bold;">{{selectedCategory}}</span></p>
+    </div>
+    <div class="sort-filter">
+        <div class="sort">
+            <div class="filter-category">
+                <p>Sort:</p>
+                <div class="main">
+                    <p>Newest</p>
+                </div>
+                <div class="dropdown" *ngIf="sortFlag">
+                    <ul>
+                        <li>Newest</li>
+                        <li>Oldest</li>
+                        <li>Cheapest</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <i class="bx bx-filter" (click)="showSort()"></i>
+    </div>
+    <div class="sort-filter">
+        <div class="count">
+            <p>Filter</p>
+            <p>(3)</p>
+        </div>
+        <i class="bx bx-filter"></i>
+        
+    </div>
+    <div class="filter-right">
+        <div class="ver-feat">
+            <div class="verified">
+                <input class="ver-check" type="checkbox">
+                <label>Verified Only</label>
+            </div>
+            <div class="featured">
+                <select>
+                    <option>Recommended</option>
+                    <option>Best Match</option>
+                    <option>High Rated</option>
+                    <option>Cheapest</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="list-grid">
+            <i class="bx bxs-grid-alt" (click)="emitViewProp()" [ngClass]="{'active': displayFlag, '': !displayFlag}"></i>
+            <i class="bx bx-list-ul" (click)="emitViewProp()" [ngClass]="{'active': !displayFlag, '': displayFlag}"></i>
+        </div>
+    </div>
+</div>

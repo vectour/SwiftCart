@@ -1,0 +1,102 @@
+.header {
+    .container{
+
+        .header-container {
+
+            padding: 0.625em 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media screen and (max-width: 768px) {
+                padding: 0.625rem 0.75rem;
+                
+            }
+    
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+    
+                i {
+                    cursor: pointer;
+                    @media screen and (min-width: 992px) {
+                        display: none;
+                    }
+                }
+                
+                h4{
+                    cursor: pointer;
+                }
+            }
+    
+            .header-center{
+    
+                border: 1.5px solid #4b44da;
+                border-radius: 5px;
+    
+                display: flex;
+    
+                input {
+                    padding-left: 10px;
+                    font-size: 12px;
+                    border-radius: 5px 0 0 5px;
+                    border: none;
+                    outline: none;
+                    width: 360px;
+                }
+    
+                .all-cat {
+                    border-left: 2px solid #4b44da;
+                    font-size: 12px;
+                    padding: 0.5em;
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                }
+    
+                button {
+                    border-radius: 0;
+                }
+    
+                @media screen and (max-width:992px) {
+                    display: none;
+                    
+                }
+            }
+    
+            .header-right {
+    
+                display: flex;
+                align-items: center;
+                gap: 1.25em;
+    
+                @media screen and (max-width: 992px) {
+                    flex-direction: row-reverse;
+                    
+                }
+    
+                .header-icon {
+                    p{
+                        font-size: 12px;
+                        display: none;
+                    }
+    
+                    
+                }
+    
+                .msg, .heart {
+                    @media screen and (max-width: 992px) {
+                        display: none;
+                        
+                    }
+                }
+            }
+
+        }
+       
+
+        
+    }
+}

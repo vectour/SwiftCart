@@ -1,0 +1,20 @@
+.btn {
+    button {
+        background: var(--primary-color);
+        color: white;
+        padding: 0.625em 1.5em;
+        font-size: var(--body-small-size);
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        height: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background: white;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+    }
+}

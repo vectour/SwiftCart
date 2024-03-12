@@ -1,0 +1,16 @@
+<div class="recom">
+    <div class="container">
+        <div class="display">
+            <h5>Recommended Products</h5>
+        </div>
+        <div class="recom-product">
+            <ul class="product-list">
+                <li *ngFor="let product of products" class="product-list-item">
+                    <img src="{{product.path}}" alt="{{product.alt}}">
+                    <p>${{product.price}}</p>
+                    <p>{{product.detail}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="region">
+    <div class="container">
+        <div class="display">
+            <h5>Suppliers By Region</h5>
+        </div>
+        <div class="region-country">
+            <ul class="product-list">
+                <li *ngFor="let country of countries" class="product-list-item">
+                    <img src="{{country.img}}" alt="{{country.alt}}">
+                    <div>
+                        <h5>{{country.name}}</h5>
+                        <p>{{country.url}}</p>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

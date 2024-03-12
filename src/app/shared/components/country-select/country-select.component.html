@@ -1,0 +1,19 @@
+<div class="country-select">
+    <div class="main" (click)="dropdownOpen()">
+        <div class="main-select">
+            <img src="{{selectedCountrySource}}" alt="{{selectedCountryAlt}}">
+            <h6>{{selectedCountryName}}</h6>
+            <i class="bx bx-chevron-{{direction}}"></i>
+        </div>
+    </div>
+    <div class="content" *ngIf="dropdown" [style.top.px] = "absoluteTop">
+        <ul >
+            <li  *ngFor="let country of countrySelect; index as i" [class.active]="i === selectedCountryColor" (click)="changeCountry(country)">
+                <img src="{{country.src}}" alt="{{country.alt}}"> 
+                <h6>{{country.countryName}}</h6>
+            </li>
+        </ul>
+    </div>
+    <ul>
+    </ul>
+</div>

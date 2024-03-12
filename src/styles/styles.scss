@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Core
+@import '/src/styles/layout/layout';
+@import '/src/styles/variables/variables';
+@import '/src/styles/base/base';
+
+// UserPage Components
+@import '/src/styles/components/UserPage/home';
+@import '/src/styles/components/UserPage/listview';
+@import '/src/styles/components/UserPage/productDetail';
+
+// StandAlone Components
+@import '/src/styles/components/standalone/header';
+@import '/src/styles/components/standalone/button';
+@import '/src/styles/components/standalone/subscribe';
+@import '/src/styles/components/standalone/footer';
+@import '/src/styles/components/standalone/countrySelect';
+@import '/src/styles/components/standalone/headerNav';
+@import '/src/styles/components/standalone/deals';
+@import '/src/styles/components/standalone/productShowcase';
+@import '/src/styles/components/standalone/button-white';
+@import '/src/styles/components/standalone/quote';
+@import '/src/styles/components/standalone/recommended';
+@import '/src/styles/components/standalone/region';
+@import '/src/styles/components/standalone/productFilter';
+@import '/src/styles/components/standalone/filter';
+
+
+
+::-webkit-scrollbar {
+    width: 0px !important;
+    background-color: white !important;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    width: 0px !important;
+    background-color: whitesmoke !important;
+    border-radius: 0px !important;
+  }
+  
+  ::-webkit-scrollbar:horizontal {
+    width: 0px !important;
+    height: 0px !important;
+    background-color: white !important;
+  }
+  
+  ::-webkit-scrollbar-thumb:horizontal {
+    width: 0px !important;
+    height: 0px !important;
+    background-color: whitesmoke !important;
+    border-radius:0px;
+  }
+

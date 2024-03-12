@@ -1,0 +1,90 @@
+.quote {
+
+    .container{
+
+        .quote-container{
+
+            background-image: url("../../../../src/assets/images/quote-bg.png");
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            padding: 2.5em;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 2em;
+                
+            }
+
+            &-detail{
+
+                color: var(--white-color);
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 0.875em;
+
+                p{
+                    font-size: var(--body-micro-size);
+                    color: var(--product-hover);
+                }
+
+            }
+
+            &-form {    
+                padding: 1.5em;
+                background: var(--white-color);
+                display: flex;
+                flex-direction: column;
+                border-radius: 6px;
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    
+                }
+
+                h5{
+                    font-size: var(--body-small-size);
+                    font-weight: var(--font-semi-bold);
+                }
+
+                input, textarea{
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    outline: none;
+                }
+
+                textarea {
+                    padding: 0.75em;
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.25em;
+
+                    .item::placeholder{
+                        color: var(--black-color);
+                    }
+
+    
+
+                    .quantity {
+                        
+                        .quantity-field {
+                            margin-right: 1em;
+                        }
+
+                        .pcs {
+                            font-size: var(--body-small-size);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

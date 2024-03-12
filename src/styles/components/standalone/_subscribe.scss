@@ -1,0 +1,43 @@
+.subscribe {
+
+    background: var(--grey-color);
+    .container {
+        display: flex;
+        justify-content: space-around;
+
+        .sub-container {
+            margin: 2.75em 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.3em;
+
+            .sub-details {
+                text-align: center;
+
+                h4 {
+                    margin-bottom: 0.25em;
+                }
+            }
+
+            .email-btn {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+    
+                .email-input {
+                    border: 1px solid var(--grey-color);
+    
+                    input {
+                        background: var(--white-color);
+                        border-radius: 5px;
+                        width: 200px;
+                    }
+                }
+    
+            }
+        }
+
+        
+    }
+}

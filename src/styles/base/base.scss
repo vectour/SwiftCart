@@ -1,0 +1,67 @@
+h1,h2 {
+    font-weight: 600;
+}
+
+h3,h4{
+    font-weight: 500;
+}
+
+h5,h6{
+    font-weight: 400;
+}
+
+input {
+    outline: none;
+    border: none;
+    font-size: 12px;
+    height: 30px;
+    padding: 0.35em;
+}
+
+h1{
+    font-size: var(--h1-font-size);
+}
+
+h2{
+    font-size: var(--h2-font-size);
+}
+
+h3{
+    font-size: var(--h3-font-size);
+}
+
+h4{
+    font-size: var(--h4-font-size);
+}
+
+h5{
+    font-size: var(--h5-font-size);
+}
+
+p{
+    font-size: var(--body-small-size);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.04s ease-in-out;
+    border: none;
+}
+
+
+
+input[type="checkbox" i] {
+    background: var(--primary-color);
+}
+

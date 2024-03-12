@@ -1,0 +1,34 @@
+<div class="product-showcase">
+    <div class="container">
+        <div class="product-showcase-display" [style.backgroundImage] = "'url('+ bgImage +')'">
+            <div class="product-title">
+                <h5>{{title}}</h5>
+                <div class="btn">
+                    <app-button-white [content]="btnContent"></app-button-white>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="product-showcase-products">
+            <ul class="product-list">
+                <li *ngFor="let product of products" class="product-list-item">
+                    <h5>{{product.title}}</h5>
+                    <div class="item-flex">
+                        <div class="item-flex-detail">
+                            <p>From</p>
+                            <p><span>USD</span>{{product.leastAmount}}</p>
+                        </div>
+                        <div class="item-flex-img">
+                            <img src="{{product.path}}">
+                        </div>
+                        
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="source">
+            <a>Source Now <i class="bx bx-arrow-right"></i></a>
+        </div>
+    </div>
+</div>

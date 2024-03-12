@@ -1,0 +1,136 @@
+<div class="product-filter">
+
+    <!-- ========================== Categories =================================-->
+    <div class="product-filter-category">
+        <div class="label">
+            <label>Category</label>
+            <i class="bx bx-chevron-down" (click)="showCategory()"></i>
+        </div>
+        <ul class="filter-list" *ngIf="showCat">
+            <li class="filter-item" *ngFor="let category of categories.slice(0,4)" #selectedCategory>
+                <span (click)="categorySelect(selectedCategory)" id="{{category}}">{{category}}</span>
+            </li>
+            <a (click)="seeCategory()" *ngIf="!seeCat">See all</a>
+            <div class="hidden-list" *ngIf="seeCat">
+                <li class="filter-item" *ngFor="let category of categories.slice(4)" #selectedCategory>
+                    <span  (click)="categorySelect(selectedCategory)">{{category}}</span>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+    <!-- ============================= Brands =================================-->
+    <div class="product-filter-category">
+        <div class="label">
+            <label>Brands</label>
+            <i class="bx bx-chevron-down" (click)="showBrand()"></i>
+        </div>
+        
+        <ul class="filter-list" *ngIf="showB">
+            <li  class="filter-item" *ngFor="let brand of ecomCategory[selectedCategory].brands.slice(0,4)" #selectedbrand>
+                <div class="filter-item-checkbox" >
+                    <!-- <input type="checkbox" (click)= "brandSelect(selectedbrand)"> -->
+                    <input type="checkbox"  (change)="brandSelect(selectedbrand, $event)">
+                    <span>{{brand}}</span>
+                </div>
+            </li>
+            <a (click)="seeBrand()" *ngIf="!seeB">See all</a>
+            <div class="hidden-list" *ngIf="seeB">
+                <li class="filter-item" *ngFor="let brand of ecomCategory[selectedCategory].brands.slice(4)" #selectedbrand>
+                    <div class="filter-item-checkbox">
+                        <input type="checkbox" (change)="brandSelect(selectedbrand, $event)">
+                        <span>{{brand}}</span>
+                    </div>
+                 </li>
+            </div>
+        </ul>
+    </div>
+
+     <!-- ============================= Features =================================-->
+     <div class="product-filter-category">
+        <div class="label">
+            <label>Features</label>
+            <i class="bx bx-chevron-down" (click)="showFeature()"></i>
+        </div>
+        
+        <ul class="filter-list" *ngIf="showFeat">
+            <li class="filter-item" *ngFor="let feature of ecomCategory[selectedCategory].features.slice(0,4)" #selectedfeature>
+                <div class="filter-item-checkbox" >
+                    <input type="checkbox" (change)= "featureSelect(selectedfeature, $event)">
+                    <span>{{feature}}</span>
+                </div>
+            </li>
+            <a (click)="seeFeature()" *ngIf="!seeFeat">See all</a>
+            <div class="hidden-list" *ngIf="seeFeat">
+                <li class="filter-item" *ngFor="let feature of ecomCategory[selectedCategory].features.slice(4)" #selectedfeature>
+                    <div class="filter-item-checkbox">
+                        <input type="checkbox" (change)= "featureSelect(selectedfeature, $event)">
+                        <span>{{feature}}</span>
+                    </div>
+                 </li>
+            </div>
+        </ul>
+    </div>
+
+    <!-- ================================ Price Range ================================ -->
+    <div class="product-filter-category">
+        <div class="label">
+            <label>Price</label>
+            <i class="bx bx-chevron-down" (click)="showPriceRange()"></i>
+        </div>
+
+        <div class="range" *ngIf="showPrice">
+            <div class="slider-track"></div>
+            <div class="range-slider">
+                <input type="range" class="range-min" min="0" max="10000" value="500" step="100" #rangeMin (change) = sliderOne()>
+                <input type="range" class="range-max" min="0" max="10000" value="9500" step="100" #rangeMax (change) = sliderTwo()>
+            </div>
+            <div class="minmax">
+                <div class="min">
+                    <label>Min</label>
+                    <input type="text" placeholder="0" [(ngModel)]="minval" (change)="sliderOne">
+                </div>
+                <div class="min">
+                    <label>Max</label>
+                    <input type="text" placeholder="99999" [(ngModel)] ="maxval" (change)="sliderTwo">
+                </div>
+            </div>
+            <button (click)="emitRange()">Apply</button>
+        </div>
+    </div>
+
+        <!-- ============================= Condition =================================-->
+     <div class="product-filter-category">
+        <div class="label">
+            <label>Condition</label>
+            <i class="bx bx-chevron-down" (click)="showCondition()"></i>
+        </div>
+        
+        <ul class="filter-list" *ngIf="showConds">
+            <li class="filter-item" *ngFor="let condition of conditions">
+                <div class="filter-item-radio">
+                    <input type="radio">
+                    <span>{{condition}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ============================= Ratings =================================-->
+    <div class="product-filter-category">
+        <div class="label">
+            <label>Ratings</label>
+            <i class="bx bx-chevron-down" (click)="showRatings()"></i>
+        </div>
+
+        <ul class="filter-list" *ngIf="showRat">
+            <li class="filter-item" *ngFor="let category of categories.slice(0,4)">
+                <div class="filter-item-radio">
+                    <input type="radio">
+                    <span>{{category}}</span>
+                </div>
+            </li>
+        </ul>
+    </div> 
+
+</div>

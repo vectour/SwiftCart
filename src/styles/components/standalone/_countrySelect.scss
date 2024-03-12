@@ -1,0 +1,59 @@
+.country-select {
+
+    position: relative;
+    img {
+        width: 18px;
+        height: 12px;
+        
+    }
+
+    .main{
+        // background: #ccc;
+        width: 100px;
+        cursor: pointer;
+        padding: 5px;
+        border: none;
+
+        &-select{
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .content {
+        position: absolute;
+        // top: -120px;
+        background: #eeecec;
+        width: 100px;
+        cursor: pointer;
+        border: 1px solid #a4a3a3;
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.25em;
+                border-bottom: 1px solid #a4a3a3;
+                padding: 5px;
+
+                &:hover{
+                    background: #7ea1dc;
+                }
+
+               
+            }
+        }
+    }
+}
+
+.active {
+    background: #7ea1dc; 
+}

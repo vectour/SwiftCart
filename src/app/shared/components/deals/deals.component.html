@@ -1,0 +1,39 @@
+<div class="deal">
+    <div class="container">
+        <div class="deal-container">
+            <div class="deal-counter">
+                <div class="deal-counter-details">
+                    <h5>Deals and offers</h5>
+                    <p>Electronic Equipments</p>
+                </div>
+                <div class="deal-counter-list">
+                    <div class="deal-counter-list-item">
+                        <h4>04</h4>
+                        <p>Days</p>
+                    </div>
+                    <div class="deal-counter-list-item">
+                        <h4>13</h4>
+                        <p>Hour</p>
+                    </div>
+                    <div class="deal-counter-list-item">
+                        <h4>34</h4>
+                        <p>Min</p>
+                    </div>
+                    <div class="deal-counter-list-item">
+                        <h4>56</h4>
+                        <p>Secs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-product">
+                <ul class="product-list">
+                    <li *ngFor="let product of prodArray" class="product-list-item">
+                        <img src="{{product.path}}">
+                        <p>{{product.name}}</p>
+                        <div class="deal-pcent">-{{product.discount}}%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
